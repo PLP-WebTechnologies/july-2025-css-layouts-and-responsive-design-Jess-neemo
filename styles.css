@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header */
+.site-header {
+  background-color: #2b3e50;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Navigation using Flexbox */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #1c2a36;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  margin: 0.5rem 1rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.main-nav a:hover {
+  background-color: #2b3e50;
+  border-radius: 5px;
+}
+
+/* Main layout using CSS Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Main content 3 parts, sidebar 1 part */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Content Section */
+.content {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* Cards using Flexbox */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #e0f7fa;
+  flex: 1 1 30%; /* Responsive flex basis */
+  padding: 1rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #004d40;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.sidebar h3 {
+  margin-top: 1rem;
+}
+
+.sidebar ul {
+  list-style: disc inside;
+  padding-left: 0;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  background-color: #1c2a36;
+  color: white;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
